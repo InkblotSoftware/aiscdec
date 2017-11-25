@@ -1,0 +1,3 @@
+[submodule "foreign/libais"]
+	path = foreign/libais
+	url = https://github.com/schwehr/libais
