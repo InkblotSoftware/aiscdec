@@ -39,7 +39,7 @@ headers).
 Example
 -------
 
-```C:
+```C
 #include <aiscdec.h>
 ...
 
