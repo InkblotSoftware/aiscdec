@@ -1,7 +1,5 @@
 cmake_minimum_required (VERSION 2.8)
 
-find_package (PythonLibs)
-
 
 ##  --------------------------------------------------------------------------
 ##  Compiler config - all targets
@@ -41,7 +39,7 @@ target_link_libraries (aiscdec
 )
 target_include_directories (aiscdec
   PUBLIC  include
-  PRIVATE ${PYTHON_INCLUDE_DIRS}
+  PRIVATE /usr/include/python2.7
 )
 set_target_properties (aiscdec
   PROPERTIES PUBLIC_HEADER include/aiscdec.h
