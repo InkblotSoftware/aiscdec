@@ -41,16 +41,10 @@ aiscdec_new ()
 
     // -- Load the libais module
 
-    // TODO do I actually need to call this? Certainly doesn't harm.
     libais::init_ais ();
 
-    PyObject *pystr_ais = PyString_FromString ("ais");
-    assert (pystr_ais);
-    
-    self->pymod_libais = PyImport_Import (pystr_ais);
+    self->pymod_libais = PyImport_ImportModule ("_ais");
     assert (self->pymod_libais);
-
-    Py_DECREF (pystr_ais);
 
     // -- Load the libais decode function
 
